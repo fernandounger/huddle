@@ -1,0 +1,71 @@
+@use 'variables'
+@use 'mixins'
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    text-decoration: none
+    list-style: none
+    border: none
+
+body
+    max-width: 1440px
+    margin-inline: auto
+
+    header
+        background-color: variables.$pale-cyan
+        position: sticky
+        top: 0
+        padding: 30px 5px
+        
+
+        .header__container
+
+            @include mixins.container
+            @include mixins.flex-center
+            justify-content: space-between
+            gap: 0.5rem
+
+            .header__logo
+                max-width: 175px
+
+                img
+                    width: 100%
+
+            .header__button
+
+                button
+                    padding: 12px 48px
+                    font-family: 'Poppins', sans-serif
+                    font-weight: 700
+                    cursor: pointer
+                    font-size: clamp(0.75rem, 0.7099rem + 0.1835vw, 0.875rem)
+                    text-align: center
+                    border-radius: 20px
+                    box-shadow: 3px 5px 15px 5px rgba(0,0,0,0.11)
+                    
+                    
+                    &:hover
+                        color: variables.$grayish-blue
+                        box-shadow: 3px 5px 15px 5px rgba(0,0,0,0.14)
+                        transition: box-shadow .2s ease-in-out , color .2s ease-in-out
+
+    section
+        width: 100%
+        background-color: variables.$pale-cyan
+        padding: 30px 5px
+
+        .community__container
+            @include mixins.container
+            @include mixins.flex-center
+
+            .community__image
+                img
+                    width: 100%
+
+                        
+
+
+                
+                
